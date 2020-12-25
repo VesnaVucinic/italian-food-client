@@ -7,8 +7,10 @@ import {createStore, applyMiddleware,compose} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import {combineReducers} from 'redux' 
+import userReducer from './reducers/userReducer'
 
 const rootReducer = combineReducers({
+  user: userReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
